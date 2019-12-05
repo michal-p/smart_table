@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Campaigns = ({campaigns, columns}) => {
+const Campaigns = ({campaigns, columns, handlerCampaignName}) => {
 	const columnsKeys = Object.keys(columns).filter(col => columns[col])
 	if(columnsKeys.length) {
 		return (
@@ -15,7 +15,20 @@ const Campaigns = ({campaigns, columns}) => {
 						campaigns.map(campaign => {
 							return (
 								<tr key={campaign.id}>
-									{columnsKeys.map(column => <td key={column}>{campaign[column]}</td>)}
+									{
+										columnsKeys.map(column => {
+											if(column === 'campaign_name') {
+												return (
+													<td key={column}>
+														<input id={campaign.id} value={campaign[column]} onChange={handlerCampaignName}/>
+													</td>
+												)
+											} 
+											else {
+												return <td key={column}>{campaign[column]}</td>
+											}
+										})
+									}
 								</tr>
 							)
 						})

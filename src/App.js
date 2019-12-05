@@ -21,13 +21,20 @@ const App = () => {
   }, [])
 
   const handlerFilter = (event) => {
-    console.log(event.target.name)
-    console.log(event.target.checked)
     let col = event.target.name
     let checked = event.target.checked
     let columnsNew = {...columns}
     columnsNew[col] = checked
     setColumns(columnsNew)
+  }
+
+  const handlerCampaignName = (event) => {
+    const id = event.target.id
+    const value = event.target.value
+    let camps = [...campaigns]
+    let changedCamp = camps.find(obj => obj.id === Number(id))
+    changedCamp.campaign_name = value
+    setCampaigns(camps)
   }
 
   return (
@@ -36,10 +43,9 @@ const App = () => {
         <h1>
           Smart table
         </h1>
-        {/* {columns.join(' | ')} */}
       </header>
       <Filter columns={columns} handler={handlerFilter}/>
-      <Campaigns campaigns={campaigns} columns={columns}/>
+      <Campaigns campaigns={campaigns} columns={columns} handlerCampaignName={handlerCampaignName}/>
     </div>
   )
 }

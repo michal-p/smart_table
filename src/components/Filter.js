@@ -7,7 +7,7 @@ const Filter = ({handler, columns}) => {
 		Object.keys(columns).map(col => {
 			return (
 				<div key={col} className="filter--cols">
-					<input type="checkbox" name={col} onChange={handler} value={columns[col]} checked={columns[col]} />
+					<input type="checkbox" name={col} onChange={handler} checked={columns[col]} />
 					<label>{col} | </label>
 				</div>
 			)
