@@ -1,13 +1,13 @@
 import React from 'react'
 
 const Campaigns = ({campaigns, columns}) => {
-	columns = Object.keys(columns)
-	if(columns.length) {
+	const columnsKeys = Object.keys(columns).filter(col => columns[col])
+	if(columnsKeys.length) {
 		return (
 			<table>
 				<thead>
 					<tr>
-						{columns.map(column => <th key={column}>{column}</th>)}
+						{columnsKeys.map(column => <th key={column}>{column}</th>)}
 					</tr>
 				</thead>
 				<tbody>
@@ -15,7 +15,7 @@ const Campaigns = ({campaigns, columns}) => {
 						campaigns.map(campaign => {
 							return (
 								<tr key={campaign.id}>
-									{columns.map(column => <td key={column}>{campaign[column]}</td>)}
+									{columnsKeys.map(column => <td key={column}>{campaign[column]}</td>)}
 								</tr>
 							)
 						})
