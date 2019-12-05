@@ -2,11 +2,11 @@
   text-align: center;
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
-}
+} */
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -15,8 +15,22 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+} */
+
+/* .App-link {
+  color: #09d3ac;
+} */
+
+table {
+  margin: 10px;
+  border-collapse: collapse;
 }
 
-.App-link {
-  color: #09d3ac;
+table td, table th {
+  padding: 5px 10px;
+  border: 1px solid grey;
+}
+
+.filter--cols {
+  display: inline-block;
 }
