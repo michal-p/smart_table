@@ -28,12 +28,13 @@ const App = () => {
     setColumns(columnsNew)
   }
 
-  const handlerCampaignName = (event) => {
+  const handlerTable = (event) => {
     const id = event.target.id
     const value = event.target.value
+    const name = event.target.name
     let camps = [...campaigns]
     let changedCamp = camps.find(obj => obj.id === Number(id))
-    changedCamp.campaign_name = value
+    changedCamp[name] = value
     setCampaigns(camps)
   }
 
@@ -45,7 +46,7 @@ const App = () => {
         </h1>
       </header>
       <Filter columns={columns} handler={handlerFilter}/>
-      <Campaigns campaigns={campaigns} columns={columns} handlerCampaignName={handlerCampaignName}/>
+      <Campaigns campaigns={campaigns} columns={columns} handlerTable={handlerTable}/>
     </div>
   )
 }
