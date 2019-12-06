@@ -1,3 +1,9 @@
+## Spustenie
+```npm start```
+Spustenie projektu na localhost:3000
+```npm run server```
+Spustenie servera na localhost:3001
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
