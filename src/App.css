@@ -2,21 +2,63 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  height: 150px;
 }
 
-.App-link {
-  color: #09d3ac;
+main {
+  overflow-x: auto;
+  padding: 10px;
+  position: relative;
+  top: 150px;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table td input, table td select {
+  font-size: 1em;
+}
+
+table td input {
+    width: 90%;
+    height: 1.5em;
+}
+
+table td, table th {
+  padding: 5px 10px;
+  border: 1px solid grey;
+}
+
+.filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.error {
+  color: red;
+  background: lightgrey;
+  font-size: 20px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  position: fixed;
+  top: 5px;
+}
+
