@@ -7,7 +7,7 @@ const Campaigns = ({campaigns, columns, handlerTable}) => {
 		<table>
 			<thead>
 				<tr>
-					{columnsKeys.map(column => <th key={column}>{column}</th>)}
+					{columnsKeys.map(column => <th className={column} key={column}>{column}</th>)}
 				</tr>
 			</thead>
 			<tbody>

@@ -14,8 +14,17 @@
 }
 
 table {
-  margin: 10px;
+  width: 100%;
   border-collapse: collapse;
+}
+
+table td input, table td select {
+  font-size: 1em;
+}
+
+table td input {
+    width: 90%;
+    height: 1.5em;
 }
 
 table td, table th {
@@ -33,7 +42,8 @@ table td, table th {
 }
 
 main {
-  overflow-x:auto;
+  overflow-x: auto;
+  padding: 10px;
 }
 
 .error {
@@ -47,3 +57,4 @@ main {
   position: fixed;
   top: 5px;
 }
+

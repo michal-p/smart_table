@@ -29,7 +29,6 @@ const App = () => {
   }
 
   const handlerTable = (event) => {
-    console.log("handlerTable event.target: ", event.target)
     event.preventDefault()
     let camps = [...campaigns]
     let editCamp = camps.find(obj => obj.id === Number(event.target.id))
