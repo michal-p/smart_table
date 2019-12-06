@@ -17,7 +17,7 @@ const Campaigns = ({campaigns, columns, handlerTable}) => {
 							{columnsKeys.map(column => {
 								return (
 									<td key={column}>
-										<Input id={campaign.id} name={column} value={campaign[column]} handlerTable={handlerTable} />
+										<Input id={campaign.id} name={column} value={campaign[column]} handlerTable={handlerTable}/>
 									</td>
 								)
 							})}

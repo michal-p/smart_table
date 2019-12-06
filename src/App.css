@@ -2,24 +2,16 @@
   text-align: center;
 }
 
-/* .App-logo {
-  height: 40vmin;
-} */
-
-/* .App-header {
+.App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-} */
-
-/* .App-link {
-  color: #09d3ac;
-} */
+}
 
 table {
   margin: 10px;
@@ -31,6 +23,27 @@ table td, table th {
   border: 1px solid grey;
 }
 
-.filter--cols {
-  display: inline-block;
+.filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+main {
+  overflow-x:auto;
+}
+
+.error {
+  color: red;
+  background: lightgrey;
+  font-size: 20px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  position: fixed;
+  top: 5px;
 }
